@@ -5,10 +5,10 @@ require 'currency'
 require 'rspec'
 
 describe Currency do
-  it 'should read from a manifest' do
+  it 'should convert correctly from CHF to EUR' do
     rate =  Currency.rate('CHF', 'EUR')
-    rate.class.should eql Float
-    rate.should < 1.0
-    rate.should > 0.5
+    expect(rate.class).to eq Float
+    expect(rate).to be < 1.0
+    expect(rate).to be > 0.5
   end
 end

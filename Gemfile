@@ -1,16 +1,7 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-gem 'rclconf'
+gemspec
 
-group :development, :test do
-  gem 'flexmock'
-  gem 'rake'
-  gem 'minitest', '>=5.0.0'
-  gem 'simplecov'
-  gem 'rspec'
-  gem 'hoe'
-end
-
-group :development do
-  gem 'pry-debugger', :platforms => [:ruby_19, :ruby_20]
+group :debugger do
+  gem 'pry-byebug'
 end

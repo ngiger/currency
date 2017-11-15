@@ -3,7 +3,7 @@
 # Currency -- de.oddb.org -- 26.02.2007 -- hwyss@ywesee.com
 
 require 'thread'
-require 'net/http'
+require "open-uri"
 
 module Currency
   @rates = {}
@@ -14,9 +14,9 @@ module Currency
     end
   end
   def Currency.get_html(origin, target)
-    Net::HTTP.start('www.google.com') { |session|
-      session.get("/finance/converter?a=1&from=#{origin.upcase}&to=#{target.upcase}").body
-    }
+    url = "https://finance.google.com/finance/converter?a=1&from=#{origin.upcase}&to=#{target.upcase}"
+    @data = URI.parse(url).read
+    return @data
   end
   def Currency.rate(origin, target)
     origin = origin.to_s.upcase[/^[A-Z]{3}/]

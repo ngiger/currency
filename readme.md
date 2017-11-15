@@ -6,8 +6,8 @@
 
 Simple local DRb-service for Currency-Conversion. 
 
-[[The project name at https://github.com/zdavatz/currency is currency but the project name at Rubyforge and
-Rubygems is ycurrency as the name "currency" was already taken.]]
+[The project name at https://github.com/zdavatz/currency is currency but the project name at Rubyforge and
+Rubygems is ycurrency as the name "currency" was already taken.]
 
 ## INSTALL:
 
